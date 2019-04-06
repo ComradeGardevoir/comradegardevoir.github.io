@@ -1,10 +1,13 @@
-// PS! Replace this with your own channel ID
-// If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'gZMsRHNkvKGPoqB2';
-
+var name = prompt("Please enter a username no longer than 20 characters:", getRandomName());
+if(name.length() >= 20){
+  name = prompt("The username was too long. Try again.", getRandomName());
+} else if(name == null){
+  name = prompt("You did not provide a username. Try again.", getRandomName());
+}
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
-    name: getRandomName(),
+    name: name,
     color: getRandomColor(),
   },
 });
