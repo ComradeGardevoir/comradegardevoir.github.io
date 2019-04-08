@@ -1,13 +1,13 @@
 const CLIENT_ID = 'gZMsRHNkvKGPoqB2';
-var name = prompt("Please enter a username no longer than 20 characters:", getRandomName());
+var username = prompt("Please enter a username no longer than 20 characters:", getRandomName());
 if(name.length() >= 20){
-  name = prompt("The username was too long. Try again.", getRandomName());
+  username = prompt("The username was too long. Try again.", getRandomName());
 } else if(name == null){
-  name = prompt("You did not provide a username. Try again.", getRandomName());
+  username = prompt("You did not provide a username. Try again.", getRandomName());
 }
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
-    name: name,
+    name: username,
     color: getRandomColor(),
   },
 });
