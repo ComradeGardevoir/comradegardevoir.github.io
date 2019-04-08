@@ -3,7 +3,7 @@ function askName() {
   var username = prompt("Please enter a username no longer than 20 characters:", getRandomName());
 if(username.length() >= 20){
   username = prompt("The username was too long. Try again.", getRandomName());
-} else if(name == null){
+} else if(username == null){
   username = prompt("You did not provide a username. Try again.", getRandomName());
 }
   return username;
