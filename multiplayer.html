@@ -1,1 +1,65 @@
-<script src="peepa.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>gumpshroom gambling</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase.js"></script>
+  <script type='text/javascript' src='persist-min.js'></script>
+  <!--script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script-->
+
+  <!-- Add Firebase products that you want to use -->
+  <!--script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script-->
+	<script src="jquery.min.js">
+	</script>
+	<script src="notify.min.js">
+	</script>
+  <script src="sweetalert2.min.js"></script>
+  <!--script src="utils.js"></script-->
+	<script src="multiplayer.min.js">
+	</script>
+  
+</head>
+
+<body onload="checkAuth()" style="//background-image:url(maxresdefault.jpg)" oncontextmenu="return false" id="body">
+	<div id="chat-container"></div>
+	<table width=100% cellspacing=0 cellpadding=0>
+		<tr>
+			<td style="color: white;" align=center bgcolor=blue><b>Money Making Game: Multiplayer Mode </b></td></tr></table>
+
+
+  <br>
+  <div style='text-align: center'><button style="display:inline-block;margin-right:auto;margin-left:auto" onclick="logout(store.get('username'))">Log Out</button>
+  <button style="display:inline-block"id="togglechat" onclick="toggleChat()">Toggle Chat</button>
+  </div>
+
+    <br>
+    <hr width=50% align=center>
+    
+
+    <p><b>Last 10 fools and their gumpshrooms:</b></p>
+    <span id="bet-container">
+
+    </span>
+    <hr width=50% align=center>
+    <p style="text-align:center;display:block;margin-right:auto;margin-left:auto"><b>Your Bets:</b></p>
+    <span id="yourbet-container">
+
+    </span>
+    <br>
+    <p style="text-align:center;display:block;margin-right:auto;margin-left:auto">You have <b><span id="shroomValue"></span></b> gumpshroom(s) on hand. </p><p>Bets can be between 1,000 shrooms and 100,000,000 shrooms.</p>
+    <p>You may have up to five bets running at a time.</p>
+
+    <p style="text-align:center;display:block;margin-right:auto;margin-left:auto">Place a bet:</p>
+    <input id="playerBet">
+    <button style="display:block;margin-right:auto;margin-left:auto" onclick="logBet()">Place Bet</button>
+    <br>
+
+
+    
+
+  </body>
+</html>
